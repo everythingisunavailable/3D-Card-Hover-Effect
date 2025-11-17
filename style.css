@@ -24,10 +24,30 @@ img{
     height: 100%;
 }
 
+.holo{
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 0, 128, 0.20) 5%,
+        rgba(255, 128, 0, 0.30) 30%,
+        rgba(255, 255, 0, 0.30) 40%,
+        rgba(0, 255, 128, 0.30) 50%,
+        rgba(0, 128, 255, 0.30) 60%,
+        rgba(128, 0, 255, 0.30) 90%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 100;
+}
+ 
 .spot {
     position: absolute;
     z-index: 100;
     top: 50%;
     left: 50%;
-    box-shadow: 0 0 60px 60px rgba(255, 255, 255, 0.485);
+    box-shadow: 0 0 80px 60px rgba(255, 255, 255, 0.485);
 }

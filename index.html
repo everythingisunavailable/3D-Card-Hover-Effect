@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="card" id="card">
         <img src="assets/blue_eyes.jpeg" alt="Blue Eyes White Dragon">
+        <div class="holo" id="holo"></div>
         <div class="spot" id="glow"></div>
     </div>
+
     <script>
         class card {
             x;
@@ -35,6 +38,7 @@
         }
 
         const glow = document.getElementById("glow");
+        const holo = document.getElementById("holo");
         function move_card(mouse, card)
         {
             let vertical_factor = (mouse.clientY - card.middle.y)/(card.height / 2);
@@ -42,7 +46,8 @@
             
             card.in_dom.style = `transform : rotateY(${-30 * horizontal_factor}deg) rotateX(${30 * vertical_factor}deg);`;
             glow.style = `top: ${mouse.clientY - card.y}px; left: ${mouse.clientX - card.x}px;`;
-            
+            holo.style = `transform : translateX(${horizontal_factor * 10}%) translateY(${vertical_factor * 10}%);`;
+            console.log(vertical_factor * 10, horizontal_factor * 10);
         }
 
         const new_card = new card();
