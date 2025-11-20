@@ -33,6 +33,11 @@
                 div.addEventListener("mousemove", (mouse)=>{
                     move_card(mouse, this);
                 });
+                div.addEventListener("mouseleave", (mouse)=>{
+                    div.style.transform = "rotate(0)";
+                    holo.style.transform = "translateX(0) translateY(0)";
+                    glow.style = "top: 50%; left: 50%;";
+                });
                 this.in_dom = div;
             }
         }
@@ -47,7 +52,6 @@
             card.in_dom.style = `transform : rotateY(${-30 * horizontal_factor}deg) rotateX(${30 * vertical_factor}deg);`;
             glow.style = `top: ${mouse.clientY - card.y}px; left: ${mouse.clientX - card.x}px;`;
             holo.style = `transform : translateX(${horizontal_factor * 10}%) translateY(${vertical_factor * 10}%);`;
-            console.log(vertical_factor * 10, horizontal_factor * 10);
         }
 
         const new_card = new card();

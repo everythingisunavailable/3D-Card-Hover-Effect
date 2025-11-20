@@ -19,6 +19,7 @@ body{
     height: 600px;
     border-radius: 10px;
     overflow: hidden;
+    transition: all 0.2s ease-out;
 }
 img{
     height: 100%;
@@ -42,6 +43,7 @@ img{
         rgba(0, 0, 0, 0) 100%
     );
     z-index: 100;
+    transition: all 0.2s ease-out;
 }
  
 .spot {
